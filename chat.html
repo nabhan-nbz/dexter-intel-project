@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Chat with Dexter</title>
+     <link rel="stylesheet" href="chat.css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+</head>
+<body>
+    <!-- Content of your home page -->
+    <div class="container">
+      <div class="top-left-buttons">
+        <a href="home.html" class="button type1">
+          <span class="btn-txt">Home</span>
+        </a>
+      </div>
+    <div class="card-container">
+      <div class="card-header">
+        <div class="img-avatar"></div>
+        <div class="text-chat rajdhani-bold">DEXTER</div>
+      </div>
+      <div class="card-body">
+        <div class="messages-container" id="chat-box">
+          <!-- Initial messages will be added by JavaScript -->
+        </div>
+        <div class="message-input">
+          <form id="message-form">
+            <textarea
+              id="user-input"
+              placeholder="Type your message here"
+              class="message-send rajdhani-regular"
+            ></textarea>
+            <button type="submit" class="button-send rajdhani-medium">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="chat.js"></script>
+  <img src="{{ url_for('static', filename='images/chatbot.jpg') }}" alt="chatbot Image">
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
